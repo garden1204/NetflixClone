@@ -11,6 +11,7 @@ const Wrapper = styled.div`
 `;
 const Logo = styled.img`
     height:100%;
+    margin-right:30px;
 `;
 
 const NavText = styled.ul`
@@ -19,19 +20,23 @@ const NavText = styled.ul`
     list-style:none;
     height:100%;
     flex:1;
+    margin:0px;
+    align-items:center;
 `
 
 const NavTextItem = styled.li`
     margin: 0px 10px;
     color:white;
+   
     `
 
 const NavIcon = styled.ul`
     display:flex;
     list-style:none;
     height:100%;
-    list-style: none;
-        height:100%;
+    margin:0px;
+    
+        
 `
 
 const NavIconItem = styled.li`
@@ -39,6 +44,7 @@ const NavIconItem = styled.li`
 
     & > img{
         height:100%;
+        margin:0px 10px;
     }
 `
 
