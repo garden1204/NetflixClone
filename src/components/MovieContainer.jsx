@@ -10,6 +10,7 @@ const Wrapper = styled.div`
     width: calc(100% - (${BtnSize} + ${BtnSize}));
     .title{
         font-weight:bold;
+        margin:20px 0px;
     }
     .container{
         position:relative;
@@ -54,10 +55,18 @@ const MovieContainer = props => {
     }, [])
 
     const onClickLeft = () => {
-        setPage(page - 1);
+        if (page !== 1) {
+            setPage(page - 1);
+        }
     };
     const onClickRight = () => {
-        setPage(page + 1)
+        if (page >= Math.ceil(props.movies.length / 5)) {
+            console.log("걸림", page, page < Math.ceil(props.movies.length / 5))
+            setPage(1);
+        }
+        else {
+            setPage(page + 1)
+        }
     };
 
 
