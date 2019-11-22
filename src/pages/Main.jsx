@@ -3,7 +3,17 @@ import Header from "../components/Header.jsx"
 import Preview from "../components/Preview.jsx"
 import MovieContainer from "../components/MovieContainer"
 import "./Main.css"
+import Axios from "axios";
 class Main extends Component {
+
+    // constructor(props) {
+    //     super(props);
+    // }
+
+    componentWillMount() {
+        const response = Axios.get("https://api.themoviedb.org/3/movie/popular?api_key=a36305ddf529faa0c37acbf47e633d08&language=ko-kr");
+        console.log(response)
+    }
 
     render() {
         return (
