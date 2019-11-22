@@ -12,7 +12,6 @@ class Main extends Component {
                 <Preview></Preview>
                 <MovieContainer title="TV프로그램" movies={[{ title: "신서유기7" }, { title: "신서유기6" }, { title: "신서유기5" }, { title: "신서유기4" }, { title: "신서유기3" }, { title: "신서유기2" }, { title: "신서유기1" }]}></MovieContainer>
                 <MovieContainer title="드라마" movies={[{ title: "신서유기7" }, { title: "신서유기6" }, { title: "신서유기5" }, { title: "신서유기4" }, { title: "신서유기3" }, { title: "신서유기2" }, { title: "신서유기1" }]}></MovieContainer>
-
             </div>
         )
     }

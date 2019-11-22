@@ -9,6 +9,7 @@ const Wrapper = styled.div`
     margin-right:10px;
     height:0;
     position:relative;
+    transition:0.2s;
     &>div{
         position:absolute;
         left:0;
@@ -20,6 +21,9 @@ const Wrapper = styled.div`
         display:flex;
         justify-content:center;
         align-items:center;
+    }
+    &:hover{
+        transform: scale(1.1)
     }
 `
 
