@@ -16,20 +16,21 @@ const Wrapper = styled.div`
         right:0;
         top:0;
         bottom:0;
-        background-color:#aaa;
 
         display:flex;
         justify-content:center;
         align-items:center;
     }
     &:hover{
-        transform: scale(1.1)
+        transform: scale(1.1);
+        z-index:100;
     }
 `
 
 const MovieItem = (props) => {
     return (
         <Wrapper>
+            <img src={props.src} width="100%" padding-botton="100%" alt="fuck" />
             <div>{props.title}</div>
         </Wrapper>
     )

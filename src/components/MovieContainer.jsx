@@ -77,7 +77,7 @@ const MovieContainer = props => {
             <BtnRight onClick={onClickRight}> {">"} </BtnRight>
             <div className="slider" ref={slider}>
                 {(props.movies || []).map(value => (
-                    <MovieItem title={value.title} />
+                    <MovieItem title={value.title} src={'http://image.tmdb.org/t/p/w185' + value.backdrop_path} />
                 ))}
             </div>
         </div>
