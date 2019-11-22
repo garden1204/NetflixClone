@@ -9,6 +9,10 @@ const Wrapper = styled.div`
         padding: 13px 58px;
         box-sizing:border-box;
         align-items:center;
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
 `;
 const Logo = styled.img`
     height:100%;
@@ -45,12 +49,10 @@ justify-content: center;
 `
 
 const NavIconItem = styled.li`
-width: fit-content;
-
+    width: fit-content;
     & > img{
     height: 100%;
     margin: 0px 10px;
-
 }
 `
 
@@ -61,17 +63,15 @@ const Header = () => {
         setNumber(e);
     }
 
-
-
     return (
         <Wrapper>
             <Logo src={"https://cdn.pixelprivacy.com/wp-content/uploads/2017/12/Netflix-Logo-1024x277.png"} alt="svg" height="100%" />
             <NavText>
-                <NavTextItem onClick={e => change(0)} style={number === 0 ? { color: "#000fff" } : {}}>홈</NavTextItem>
-                <NavTextItem onClick={e => change(1)} style={number === 1 ? { color: "#000fff" } : {}}>TV 프로그램</NavTextItem>
-                <NavTextItem onClick={e => change(2)} style={number === 2 ? { color: "#000fff" } : {}}>영화</NavTextItem>
-                <NavTextItem onClick={e => change(3)} style={number === 3 ? { color: "#000fff" } : {}}>최신 등록 콘텐츠</NavTextItem>
-                <NavTextItem onClick={e => change(4)} style={number === 4 ? { color: "#000fff" } : {}}>내가 찜한 콘텐츠</NavTextItem>
+                <NavTextItem onClick={e => change(0)} style={number === 0 ? { color: "#fff" } : {}}>홈</NavTextItem>
+                <NavTextItem onClick={e => change(1)} style={number === 1 ? { color: "#fff" } : {}}>TV 프로그램</NavTextItem>
+                <NavTextItem onClick={e => change(2)} style={number === 2 ? { color: "#fff" } : {}}>영화</NavTextItem>
+                <NavTextItem onClick={e => change(3)} style={number === 3 ? { color: "#fff" } : {}}>최신 등록 콘텐츠</NavTextItem>
+                <NavTextItem onClick={e => change(4)} style={number === 4 ? { color: "#fff" } : {}}>내가 찜한 콘텐츠</NavTextItem>
             </NavText>
             <NavIcon>
                 <NavIconItem><img src="/search.svg" alt="" /></NavIconItem>
