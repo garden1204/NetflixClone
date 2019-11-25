@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import Preview from "../components/Preview.jsx"
 import MovieContainer from "../components/MovieContainer"
 import withLayout from "../components/withLayout"
-import "./Main.css"
 import Axios from "axios";
-class Main extends Component {
+class Favorite extends Component {
 
     constructor(props) {
         super(props);
@@ -33,12 +32,10 @@ class Main extends Component {
 
     render() {
         return (
-            <div style={{ marginTop: "45%", overflowX: "hidden", overflowY: "hidden", width: "100%" }}>
-                <Preview></Preview>
-                <MovieContainer title="TV프로그램" movies={this.state.movies}></MovieContainer>
+            <div style={{ marginTop: "15%", overflowX: "hidden", overflowY: "hidden", width: "100%" }}>
                 <MovieContainer title="TV프로그램" movies={this.state.week}></MovieContainer>
             </div>
         )
     }
 }
-export default withLayout(Main);
+export default withLayout(Favorite);

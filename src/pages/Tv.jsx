@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import Preview from "../components/Preview.jsx"
 import MovieContainer from "../components/MovieContainer"
 import withLayout from "../components/withLayout"
-import "./Main.css"
 import Axios from "axios";
-class Main extends Component {
+class Tv extends Component {
 
     constructor(props) {
         super(props);
@@ -41,4 +40,4 @@ class Main extends Component {
         )
     }
 }
-export default withLayout(Main);
+export default withLayout(Tv);

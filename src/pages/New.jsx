@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import Preview from "../components/Preview.jsx"
 import MovieContainer from "../components/MovieContainer"
 import withLayout from "../components/withLayout"
-import "./Main.css"
 import Axios from "axios";
-class Main extends Component {
+class New extends Component {
 
     constructor(props) {
         super(props);
@@ -17,7 +16,9 @@ class Main extends Component {
     componentWillMount() {
         Axios.get("https://api.themoviedb.org/3/movie/popular?api_key=a36305ddf529faa0c37acbf47e633d08&language=ko-kr").then(response => {
             console.log(response)
-            this.setState({ movies: response.data.results })
+
+            let a = response.data.results.filter(a => a.vote_count > 1000);
+            this.setState({ movies: a })
         }).catch(err => {
             console.log("err");
         });
@@ -33,12 +34,10 @@ class Main extends Component {
 
     render() {
         return (
-            <div style={{ marginTop: "45%", overflowX: "hidden", overflowY: "hidden", width: "100%" }}>
-                <Preview></Preview>
+            <div style={{ marginTop: "15%", overflowX: "hidden", overflowY: "hidden", width: "100%" }}>
                 <MovieContainer title="TV프로그램" movies={this.state.movies}></MovieContainer>
-                <MovieContainer title="TV프로그램" movies={this.state.week}></MovieContainer>
             </div>
         )
     }
 }
-export default withLayout(Main);
+export default withLayout(New);
